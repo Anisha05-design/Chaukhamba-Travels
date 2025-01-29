@@ -1,0 +1,109 @@
+<!DOCTYpE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Information</title>
+    <style>
+    	.text h1{
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            text-align: center;
+            color: darkblue;
+        }
+        form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #f9f9f9;
+        }
+        label {
+        font-weight: bold;
+        font-size: 2rem;
+        color: darkred;
+        }
+
+        input, select, textarea, button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
+
+        button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+       <iframe src="header.html" width="100%" height="150px" style="border: none;"></iframe>
+       <div class="text">
+       <h1> Details of your trip</h1>
+    
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" 
+               pattern="[0-9]{10}" required>
+        <br><br>
+
+        <label for="State">Location to visit:</label>
+        <select id="State" name="State" required>
+            <option value="">--Select your state--</option>
+            <option value="Andaman">Andaman and Nicobar Island</option>
+            <option value="Andhra">Andhra Pradesh</option>
+            <option value="Arunachal">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="char">Char Dham</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Himachal">Himachal Pradesh</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="Jammu">Jammu and Kashmir</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Golden">Golden Traingle</option>
+            <option value="Other">Other Place</option>
+        </select>
+        <br><br>
+        <label for="dob">From:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+        <label for="dob">Till:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+        <label for="Adult">Number of Adults:</label>
+        <input type="number" id="Adults" name="Adults" placeholder="Enter the total number of adults" min="1" max="50" step="1" required>
+        <br><br>
+        <label for="Children">Number of Children:</label>
+        <input type="number" id="Children" name="Children" placeholder="Enter the total number of children" min="1" max="50" step="1" required>
+        <br><br>
+     <button type="submit">Submit</button>
+    </form>
+<div>
+    <iframe src="footer.html" width="100%" height="355px" style="border: none;"></iframe>
+</div>
+</body>
+</html>
